@@ -24,6 +24,13 @@ class JsonSchemaObject(object):
         minLength:Optional[int]=None,
         maxLength:Optional[int]=None)->"JsonSchemaObject":
         return self.add(key=key, required=required, object=JsonSchemaString.build(minLength=minLength, maxLength=maxLength))
+
+    def add_strings(self, *, keys:List[str], required:bool)->"JsonSchemaObject":
+        for key in keys:
+            self.add_string(key=key, required=required)
+        return self
+
+
     #convenience function
     def add_integer(self, *, 
         key:str, 
