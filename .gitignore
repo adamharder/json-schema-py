@@ -3,3 +3,4 @@ build/*
 VENV/*
 */__pycache__/*
 dist/*
+easyjsonschema.egg-info/*
